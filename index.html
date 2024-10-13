@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <title>Automation Learning Hub</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
 </head>
+
 <body>
+    <div class="bg">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Automation Learning Hub</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="#">
+            <img src="assets/images/logo.png" alt="" width="28" height="28" class="d-inline-block align-text-top">
+            Automation Learning Hub
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -21,14 +29,16 @@
                 <li class="nav-item"><a class="nav-link" href="#tools">Tools</a></li>
                 <li class="nav-item"><a class="nav-link" href="#quizzes">Quizzes</a></li>
                 <li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
+                <li class="nav-item"><a class="nav-link" href="#codeSnippets">Code Snippets</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="bg-primary text-white text-center py-5">
-        <h1>Learn Automation Testing</h1>
-        <p>Resources, tutorials, and tools to become an automation expert.</p>
+    <header class="text-white text-center py-5" style="background-image: url('/assets/images/banner.jpg');">
+
+        <h1 class="hero-sec">Learn Automation Testing</h1>
+        <p>Resources, Tutorials, Code Snippets and Tools to become an Automation Expert.</p>
         <a href="#tutorials" class="btn btn-light mt-3">Get Started</a>
     </header>
 
@@ -40,7 +50,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Beginner's Guide to Selenium</h5>
-                        <p class="card-text">Learn the basics of Selenium and how to write your first automation test.</p>
+                        <p class="card-text">Learn the basics of Selenium and how to write your first automation test.
+                        </p>
                         <a href="tutorials/selenium.html" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
@@ -49,7 +60,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Introduction to Cypress</h5>
-                        <p class="card-text">Discover how to use Cypress for end-to-end testing with practical examples.</p>
+                        <p class="card-text">Discover how to use Cypress for end-to-end testing with practical examples.
+                        </p>
                         <a href="tutorials/cypress.html" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
@@ -67,10 +79,23 @@
                     <div class="card-body">
                         <h5 class="card-title">Fake Data Generator</h5>
                         <p class="card-text">Generate fake data for your testing needs.</p>
-                        <a href="https://your-fake-data-generator-link.com" class="btn btn-primary">Try it Now</a>
+                        <a href="https://harshakr1998.github.io/generateFakeData" target="_blank"
+                            class="btn btn-primary">Try it Now</a>
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Automation Testing Practice Page</h5>
+                        <p class="card-text">A Place for Automation Testing using selenium.</p>
+                        <a href="https://harshakr1998.github.io/automationPractice/" target="_blank"
+                            class="btn btn-primary">Try it Now</a>
+                    </div>
+                </div>
+            </div>
+
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
@@ -83,29 +108,255 @@
         </div>
     </section>
 
+    <section id="codeSnippets" class="container my-5">
+        <h2 class="text-center mb-4">Code Snippets</h2>
+        <div class="accordion" id="codeSnippetsAccordion">
+
+        <!-- Button to toggle WebDriver Initialization -->
+        <button class="btn btn-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#webdriverSnippet"
+            aria-expanded="false" aria-controls="webdriverSnippet">
+            WebDriver Initialization (Java)
+        </button>
+
+        <!-- Button to toggle Browser Navigation -->
+        <button class="btn btn-primary mb-3" type="button" data-bs-toggle="collapse"
+            data-bs-target="#browserNavigationSnippet" aria-expanded="false" aria-controls="browserNavigationSnippet">
+            Browser Navigation
+        </button>
+
+        <!-- Button to toggle Element Locators -->
+        <button class="btn btn-primary mb-3" type="button" data-bs-toggle="collapse"
+            data-bs-target="#elementLocatorSnippet" aria-expanded="false" aria-controls="elementLocatorSnippet">
+            Element Locators
+        </button>
+
+        <!-- Button to toggle Screenshot Taking -->
+        <button class="btn btn-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#screenshotSnippet"
+            aria-expanded="false" aria-controls="screenshotSnippet">
+            Taking Screenshots
+        </button>
+
+        <!-- Button to toggle Handling User Interactions-->
+        <button class="btn btn-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#HandlingUserInteractions"
+            aria-expanded="false" aria-controls="HandlingUserInteractions">
+            Handling User Interactions
+        </button>
+
+        <!-- Button to toggle Handling Alerts and Pop-ups-->
+        <button class="btn btn-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#HandlingAlertsandPop-ups"
+            aria-expanded="false" aria-controls="HandlingAlertsandPop-ups">
+            Handling Alerts and Pop-ups
+        </button>
+
+        <!-- Button to toggle Waiting for Elements-->
+        <button class="btn btn-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#WaitingforElements"
+            aria-expanded="false" aria-controls="Waiting for Elements">
+            Waiting for Elements
+        </button>
+
+        <!-- Button to toggle Assertions and Verifications-->
+        <button class="btn btn-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#AssertionsandVerifications"
+            aria-expanded="false" aria-controls="AssertionsandVerifications">
+            Assertions and Verifications
+        </button>
+
+        <!-- Button to toggle Handling Frames and iFrames-->
+        <button class="btn btn-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#HandlingFramesandiFrames"
+            aria-expanded="false" aria-controls="HandlingFramesandiFrames">
+            Handling Frames and iFrames
+        </button>
+
+        <!-- Button to toggle Working with Multiple Windows-->
+        <button class="btn btn-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#WorkingwithMultipleWindows"
+            aria-expanded="false" aria-controls="WorkingwithMultipleWindows">
+            Working with Multiple Windows
+        </button>
+
+        <!-- Button to toggle Data-Driven Testing -->
+        <button class="btn btn-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#Data-DrivenTesting"
+            aria-expanded="false" aria-controls="Data-DrivenTesting">
+            Data-Driven Testing
+        </button>
+
+        <!-- Button to toggle API Testing with RestAssured -->
+        <button class="btn btn-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#APITestingwithRestAssured"
+            aria-expanded="false" aria-controls="APITestingwithRestAssured">
+            API Testing with RestAssured
+        </button>   
+
+<!--Code Snippets Section for all the buttons above -->
+        <!-- Collapsible section for WebDriver Initialization -->
+        <div class="collapse" id="webdriverSnippet" data-bs-parent="#codeSnippetsAccordion">
+            <pre>
+                <code class="language-java">
+                    import org.openqa.selenium.WebDriver;
+                    import org.openqa.selenium.chrome.ChromeDriver;
+
+                        public class WebDriverInitialization {
+                            public static void main(String[] args) {
+                                 System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+                                WebDriver driver = new ChromeDriver();
+                                driver.get("https://www.example.com");
+                                System.out.println("Page title is: " + driver.getTitle());
+                                driver.quit();
+                            }
+                        }
+                </code>
+            </pre>
+        </div>
+
+        <!-- Collapsible section for Browser Navigation -->
+        <div class="collapse" id="browserNavigationSnippet" data-bs-parent="#codeSnippetsAccordion">
+            <pre>
+        <code>
+            driver.get("https://example.com");
+            driver.navigate().refresh();
+            driver.navigate().back();
+            driver.navigate().forward();
+        </code>
+    </pre>
+        </div>
+
+        <!-- Collapsible section for Element Locators -->
+        <div class="collapse" id="elementLocatorSnippet" data-bs-parent="#codeSnippetsAccordion">
+            <pre><code>
+        WebElement element = driver.findElement(By.id("elementId"));
+        WebElement element = driver.findElement(By.xpath("//div[@class='example']"));
+    </code></pre>
+        </div>
+
+        <!-- Collapsible section for screenshot Snippet -->
+        <div class="collapse" id="screenshotSnippet" data-bs-parent="#codeSnippetsAccordion">
+            <pre>
+                <code>
+                    File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+                    FileUtils.copyFile(screenshot, new File("path/to/save/screenshot.png"));
+                </code>
+            </pre>
+        </div>
+
+        <!-- Collapsible section for Handling User Interactions -->
+        <div class="collapse" id="HandlingUserInteractions" data-bs-parent="#codeSnippetsAccordion">
+            <pre>
+                <code>
+                    WebElement inputField = driver.findElement(By.name("username"));
+                    inputField.sendKeys("your_username");
+                    inputField.submit();
+                </code>
+            </pre>
+        </div>
+
+        <!-- Collapsible section for Handling Alerts and Pop-ups -->
+        <div class="collapse" id="HandlingAlertsandPop-ups" data-bs-parent="#codeSnippetsAccordion">
+            <pre>
+                <code>
+                    Alert alert = driver.switchTo().alert();
+                    alert.accept();
+
+                </code>
+            </pre>
+        </div>
+
+        <!-- Collapsible section for Waiting for Elements -->
+        <div class="collapse" id="WaitingforElements" data-bs-parent="#codeSnippetsAccordion">
+            <pre>
+                <code>
+                    WebDriverWait wait = new WebDriverWait(driver, 10);
+                    WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("dynamicElement")));
+                </code>
+            </pre>
+        </div>
+
+        <!-- Collapsible section for Assertions and Verifications -->
+        <div class="collapse" id="AssertionsandVerifications" data-bs-parent="#codeSnippetsAccordion">
+            <pre>
+                <code>
+                    Assert.assertEquals("Expected Title", driver.getTitle());
+                </code>
+            </pre>
+        </div>
+
+        <!-- Collapsible section for Handling Frames and iFrames -->
+        <div class="collapse" id="HandlingFramesandiFrames" data-bs-parent="#codeSnippetsAccordion">
+            <pre>
+                <code>
+                    driver.switchTo().frame("frameName");
+                </code>
+            </pre>
+        </div>
+
+        <!-- Collapsible section for Working with Multiple Windows -->
+        <div class="collapse" id="WorkingwithMultipleWindows" data-bs-parent="#codeSnippetsAccordion">
+            <pre>
+                <code>
+                    String mainWindow = driver.getWindowHandle();
+                    Set<String> allWindows = driver.getWindowHandles();
+                    for (String window : allWindows) {
+                        if (!window.equals(mainWindow)) {
+                            driver.switchTo().window(window);
+                        }
+                    }
+                </code>
+            </pre>
+        </div>
+
+        <!-- Collapsible section for Data-Driven Testing -->
+        <div class="collapse" id="Data-DrivenTesting" data-bs-parent="#codeSnippetsAccordion">
+            <pre>
+                <code>
+                    FileInputStream fis = new FileInputStream("testData.xlsx");
+                    Workbook workbook = new XSSFWorkbook(fis);
+                    Sheet sheet = workbook.getSheetAt(0);
+                    String data = sheet.getRow(1).getCell(0).getStringCellValue();
+                </code>
+            </pre>
+        </div>
+
+        <!-- Collapsible section for API Testing with RestAssured -->
+        <div class="collapse" id="APITestingwithRestAssured" data-bs-parent="#codeSnippetsAccordion">
+            <pre>
+                <code>
+                    given().header("Authorization", "Bearer token")
+                    .when().get("https://api.example.com/data")
+                    .then().statusCode(200);             
+                </code>
+            </pre>
+        </div>
+    </div>
+    </section>
+
     <!-- Quizzes Section -->
     <section id="quizzes" class="container my-5">
         <h2 class="text-center mb-4">Quizzes</h2>
         <p class="text-center">Test your knowledge with our interactive quizzes!</p>
-        <a href="quizzes.html" class="btn btn-primary d-block mx-auto">Take a Quiz</a>
+        <a href="quizzes.html" target="_blank" class="btn btn-primary d-block mx-auto">Take a Quiz</a>
     </section>
 
     <!-- Resources Section -->
     <section id="resources" class="container my-5">
         <h2 class="text-center mb-4">Resources</h2>
         <ul class="list-group">
-            <li class="list-group-item"><a href="https://www.selenium.dev/documentation/" target="_blank">Selenium Documentation</a></li>
-            <li class="list-group-item"><a href="https://docs.cypress.io/guides/overview/why-cypress" target="_blank">Cypress Documentation</a></li>
-            <li class="list-group-item"><a href="https://www.postman.com/api-documentation-templates" target="_blank">Postman API Documentation</a></li>
+            <li class="list-group-item"><a href="https://www.selenium.dev/documentation/" target="_blank">Selenium
+                    Documentation</a></li>
+            <li class="list-group-item"><a href="https://docs.cypress.io/guides/overview/why-cypress"
+                    target="_blank">Cypress Documentation</a></li>
+            <li class="list-group-item"><a href="https://www.postman.com/api-documentation-templates"
+                    target="_blank">Postman API Documentation</a></li>
             <!-- Add more resources as needed -->
         </ul>
     </section>
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
-        <p>Built by [Your Name] | <a href="https://github.com/yourusername" class="text-white">GitHub</a></p>
+        <p>Built by Harsha K R | <a href="https://github.com/harshakr1998" class="text-white">GitHub</a></p>
     </footer>
 
     <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    </div>
 </body>
+
 </html>

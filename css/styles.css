@@ -1,5 +1,39 @@
-body {
+.navbar-brand{
+    margin-left: var(--bs-navbar-brand-margin-end);
+}
+
+.navbar{
+    color: cornsilk;
+    font-family: cursive;
+}
+
+.hero-sec{
+    color: rgb(255, 253, 253);
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+body, html{
     font-family: Arial, sans-serif;
+    height: 100%;
+    
+}
+
+.bg {
+  /* The image used */
+  background-image: url("/assets/images/bg.jpg");
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1, h2 {
@@ -9,3 +43,32 @@ h1, h2 {
 .card-title {
     font-size: 1.25rem;
 }
+
+.card-body {
+    box-sizing: content-box;
+  }
+
+  /* Custom styles */
+  .carousel-item pre {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+  }
+
+  pre {
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Consolas, "Courier New", monospace;
+    overflow: auto;
+    border-width: 1px;
+    border-color: black;
+  }
+
+  .hljs{
+    background-color: #ffffff;
+    
+  }
+  code {
+    font-size: 1em;
+  }
