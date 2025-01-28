@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+        <link rel="stylesheet" href="/css/styles.css">
+        <title>Beginner's Guide to Selenium</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    </head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><i class="fas fa-rocket"></i> Selenium Wiki</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#overview"><i class="fas fa-info-circle"></i> Overview</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#getting-started"><i class="fas fa-cogs"></i> Getting Started</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#core-concepts"><i class="fas fa-code"></i> Core Concepts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#advanced-topics"><i class="fas fa-layer-group"></i> Advanced Topics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#integration"><i class="fas fa-plug"></i> Integration</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#practical-examples"><i class="fas fa-laptop-code"></i> Practical Examples</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#troubleshooting"><i class="fas fa-bug"></i> Troubleshooting</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#faq"><i class="fas fa-question-circle"></i> FAQs</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container">
+
+    <!-- Overview Section -->
+    <div id="overview" class="content-section">
+        <div class="section-title">
+            <h2>Overview</h2>
+        </div>
+        <p><strong>What is Selenium?</strong></p>
+        <p>Selenium is an open-source tool used for automating web applications across different browsers. It supports multiple programming languages like Java, Python, C#, and JavaScript.</p>
+        <p><strong>Advantages:</strong></p>
+        <ul>
+            <li>Cross-browser support</li>
+            <li>Multi-language support</li>
+            <li>Open-source and community-driven</li>
+        </ul>
+        <p><strong>Disadvantages:</strong></p>
+        <ul>
+            <li>Limited support for handling desktop applications</li>
+            <li>Steeper learning curve for advanced topics</li>
+        </ul>
+        <p><strong>Selenium Components:</strong></p>
+        <ul>
+            <li><strong>Selenium IDE:</strong> A record-and-playback tool.</li>
+            <li><strong>Selenium WebDriver:</strong> A core component for automating browsers.</li>
+            <li><strong>Selenium Grid:</strong> Supports parallel testing across different machines and browsers.</li>
+        </ul>
+    </div>
+
+    <!-- Getting Started Section -->
+    <div id="getting-started" class="content-section">
+        <div class="section-title">
+            <h2>Getting Started</h2>
+        </div>
+        <p><strong>Installation and Setup</strong></p>
+        <ol>
+            <li><strong>Install Java:</strong> Selenium requires Java JDK. You can download it from the official Java website.</li>
+            <li><strong>Download Selenium WebDriver:</strong> Get the latest version from <a href="https://www.selenium.dev/downloads/" target="_blank">here</a>.</li>
+            <li><strong>Install Browser Drivers:</strong> Download the appropriate driver for your browser (e.g., ChromeDriver for Chrome).</li>
+        </ol>
+    </div>
+
+    <!-- Core Concepts Section -->
+    <div id="core-concepts" class="content-section">
+        <div class="section-title">
+            <h2>Core Concepts</h2>
+        </div>
+        <p><strong>Selenium WebDriver:</strong> WebDriver is the heart of Selenium, providing a simple interface for interacting with web pages.</p>
+        <p><strong>Locators and WebElements:</strong> Locators are used to find elements on a webpage. Selenium supports locators such as ID, Name, Class, XPath, and CSS Selectors.</p>
+    </div>
+
+    <!-- Advanced Topics Section -->
+    <div id="advanced-topics" class="content-section">
+        <div class="section-title">
+            <h2>Advanced Topics</h2>
+        </div>
+        <p><strong>Test Automation Frameworks:</strong> Learn how to create a test automation framework with Selenium, including Page Object Model (POM) and TestNG integration.</p>
+        <p><strong>Selenium Grid:</strong> A tool for running tests on multiple machines and browsers in parallel to save time.</p>
+        <p><strong>Headless Testing:</strong> Run tests without a UI, speeding up the testing process, especially in CI/CD pipelines.</p>
+    </div>
+
+    <!-- Integration Section -->
+    <div id="integration" class="content-section">
+        <div class="section-title">
+            <h2>Integration</h2>
+        </div>
+        <p><strong>Integration with Maven, TestNG, and JUnit:</strong> Learn how to integrate Selenium with Maven for dependency management, TestNG or JUnit for test execution.</p>
+        <p><strong>Integration with CI/CD Tools:</strong> Automate your Selenium tests as part of your Continuous Integration/Continuous Deployment pipeline using Jenkins or GitLab CI.</p>
+    </div>
+
+    <!-- Practical Examples Section -->
+    <div id="practical-examples" class="content-section">
+        <div class="section-title">
+            <h2>Practical Examples</h2>
+        </div>
+        <p><strong>Common Automation Tasks:</strong> Learn how to automate login forms, dropdowns, file uploads, and other common web elements.</p>
+        <p><strong>Handling Popups and Alerts:</strong> Selenium provides simple ways to handle browser alerts and popups.</p>
+        <p><strong>Working with Frames and iFrames:</strong> Learn how to switch between frames and interact with elements inside them.</p>
+    </div>
+
+    <!-- Troubleshooting Section -->
+    <div id="troubleshooting" class="content-section">
+        <div class="section-title">
+            <h2>Troubleshooting</h2>
+        </div>
+        <p><strong>Common Issues:</strong> Learn how to handle issues like ElementNotVisibleException, StaleElementReferenceException, etc.</p>
+        <p><strong>Debugging Selenium Tests:</strong> Tips and tools for debugging your Selenium tests and troubleshooting problems effectively.</p>
+    </div>
+
+    <!-- FAQs Section -->
+    <div id="faq" class="content-section">
+        <div class="section-title">
+            <h2>FAQs</h2>
+        </div>
+        <p><strong>What browsers are supported by Selenium?</strong> Selenium supports all major browsers, including Chrome, Firefox, Safari, and Edge.</p>
+        <p><strong>What programming languages can I use with Selenium?</strong> Selenium supports Java, Python, C#, Ruby, and JavaScript.</p>
+    </div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+
+</body>
+</html>

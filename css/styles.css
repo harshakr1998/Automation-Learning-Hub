@@ -1,29 +1,33 @@
-.navbar-brand{
-    margin-left: var(--bs-navbar-brand-margin-end);
+.navbar-brand {
+  margin-left: var(--bs-navbar-brand-margin-end);
 }
 
-.navbar{
-    color: cornsilk;
-    font-family: cursive;
+.navbar {
+  color: cornsilk;
+  font-family: cursive;
 }
 
-.hero-sec{
-    color: rgb(255, 253, 253);
+.hero-sec {
+  color: rgb(255, 253, 253);
 }
 
 html {
   overflow: scroll;
   overflow-x: hidden;
 }
+
 ::-webkit-scrollbar {
-  width: 0;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: just make scrollbar invisible */
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
 }
 
-body, html{
-    font-family: Arial, sans-serif;
-    height: 100%;
-    
+body,
+html {
+  font-family: Arial, sans-serif;
+  height: 100%;
+
 }
 
 .bg {
@@ -36,39 +40,68 @@ body, html{
   background-size: cover;
 }
 
-h1, h2 {
-    color: #333;
+h1,
+h2 {
+  color: #333;
 }
 
 .card-title {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 .card-body {
-    box-sizing: content-box;
-  }
+  box-sizing: content-box;
+}
 
-  /* Custom styles */
-  .carousel-item pre {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #dee2e6;
-  }
+/* Custom styles */
+.carousel-item pre {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+}
 
-  pre {
-    padding: 10px;
-    border-radius: 5px;
-    font-family: Consolas, "Courier New", monospace;
-    overflow: auto;
-    border-width: 1px;
-    border-color: black;
-  }
+pre {
+  padding: 10px;
+  border-radius: 5px;
+  font-family: Consolas, "Courier New", monospace;
+  overflow: auto;
+  border-width: 1px;
+  border-color: black;
+}
 
-  .hljs{
-    background-color: #ffffff;
-    
-  }
-  code {
-    font-size: 1em;
-  }
+.hljs {
+  background-color: #ffffff;
+
+}
+
+code {
+  font-size: 1em;
+}
+
+pre {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.section-title {
+  border-bottom: 2px solid #0d6efd;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+}
+
+/* Default nav link styling */
+.navbar .nav-link {
+  color: rgb(8, 0, 0);
+  /* Default text color */
+  transition: color 0.3s ease-in-out;
+  /* Smooth transition effect */
+}
+
+/* Hover effect */
+.navbar .nav-link:hover {
+  color: #7700ff;
+  /* Change to a gold-like color on hover */
+}

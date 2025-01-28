@@ -1,56 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-    <link rel="stylesheet" href="/css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+    <link rel="stylesheet" href="/css/styles.css" />
     <title>Beginner's Guide to Selenium</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <div class="bg">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="../index.html">
-            <img src="/assets/images/logo.png" alt="" width="28" height="28" class="d-inline-block align-text-top">
-            Automation Learning Hub
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="../assets/images/logo.png"
+            alt=""
+            width="28"
+            height="28"
+            class="d-inline-block align-text-top"
+          />
+          Automation Learning Hub
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#tutorials">Tutorials</a></li>
-                <li class="nav-item"><a class="nav-link" href="#tools">Tools</a></li>
-                <li class="nav-item"><a class="nav-link" href="#quizzes">Quizzes</a></li>
-                <li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
-                <li class="nav-item"><a class="nav-link" href="#codeSnippets">Code Snippets</a></li>
-            </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#introduction"
+                ><i class="fas fa-info-circle"></i> Introduction</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#setup"
+                ><i class="fas fa-cogs"></i> Setup</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#first-script"
+                ><i class="fas fa-code"></i> First Script</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#locators"
+                ><i class="fas fa-search"></i> Locators</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="advancedTopics"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fas fa-layer-group"></i> Advanced Topics
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="advancedTopics">
+                <li>
+                  <a class="dropdown-item" href="#advanced-features"
+                    ><i class="fas fa-tools"></i> Advanced Features</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#pom"
+                    ><i class="fas fa-project-diagram"></i> Page Object Model</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#selenium-grid"
+                    ><i class="fas fa-network-wired"></i> Selenium Grid</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#headless-testing"
+                    ><i class="fas fa-eye-slash"></i> Headless Testing</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq"
+                ><i class="fas fa-question-circle"></i> FAQs</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="selwiki.html"
+                ><i class="fas fa-question-circle"></i>Wiki</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
-    <div class="container my-5">
-        <h1>Beginner's Guide to Selenium</h1>
-        <p>Selenium is a powerful tool for automating web applications. This tutorial will help you get started.</p>
-        <h2>Installation</h2>
-        <p>Follow these steps to install Selenium:</p>
-        <ol>
-            <li>Download and install Python (if not already installed).</li>
-            <li>Run <code>pip install selenium</code> to install Selenium.</li>
-        </ol>
-        <h2>Writing Your First Test</h2>
-        <p>Here’s a simple example:</p>
-        <pre><code>from selenium import webdriver
 
-driver = webdriver.Chrome()
-driver.get('http://example.com')
-print(driver.title)
-driver.quit()</code></pre>
+    <div class="container mt-4">
+      <h1 class="text-center">Comprehensive Selenium Guide (Java)</h1>
+      <hr />
+
+      <!-- Introduction Section -->
+      <section id="introduction" class="mb-4">
+        <h2 class="section-title">Introduction to Selenium</h2>
+        <p>
+          Selenium is a suite of tools for automating web browsers. It supports
+          various programming languages, including Java.
+        </p>
+        <ul>
+          <li><strong>Components of Selenium:</strong></li>
+          <ul>
+            <li>Selenium WebDriver</li>
+            <li>Selenium IDE</li>
+            <li>Selenium Grid</li>
+          </ul>
+        </ul>
+      </section>
+
+      <!-- Setup Section -->
+      <section id="setup" class="mb-4">
+        <h2 class="section-title">Setting Up Selenium with Java</h2>
+        <ol>
+          <li>Install Java (JDK) and an IDE (e.g., Eclipse, IntelliJ IDEA).</li>
+          <li>Download Selenium JAR files or add Maven dependencies.</li>
+          <li>Add WebDriver executables (e.g., ChromeDriver).</li>
+        </ol>
+        <pre>
+&lt;dependency&gt;
+    &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
+    &lt;artifactId&gt;selenium-java&lt;/artifactId&gt;
+    &lt;version&gt;4.x.x&lt;/version&gt;
+&lt;/dependency&gt;
+            </pre
+        >
+      </section>
+
+      <!-- First Script Section -->
+      <section id="first-script" class="mb-4">
+        <h2 class="section-title">Writing Your First Selenium Script</h2>
+        <pre>
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class FirstSeleniumTest {
+    public static void main(String[] args) {
+        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.example.com");
+        System.out.println("Page title is: " + driver.getTitle());
+        driver.quit();
+    }
+}
+            </pre
+        >
+      </section>
+
+      <!-- Locators Section -->
+      <section id="locators" class="mb-4">
+        <h2 class="section-title">Locators in Selenium</h2>
+        <p>Selenium provides multiple ways to locate elements:</p>
+        <ul>
+          <li>
+            <strong>ID:</strong> <code>driver.findElement(By.id("id"));</code>
+          </li>
+          <li>
+            <strong>Name:</strong>
+            <code>driver.findElement(By.name("name"));</code>
+          </li>
+          <li>
+            <strong>CSS Selector:</strong>
+            <code>driver.findElement(By.cssSelector("css"));</code>
+          </li>
+          <li>
+            <strong>XPath:</strong>
+            <code>driver.findElement(By.xpath("//xpath"));</code>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Page Object Model Section -->
+      <section id="pom" class="mb-4">
+        <h2 class="section-title">Page Object Model (POM)</h2>
+        <p>
+          The Page Object Model (POM) is a design pattern that enhances test
+          maintainability by separating UI elements from test logic.
+        </p>
+        <pre>
+public class LoginPage {
+    WebDriver driver;
+    By username = By.id("username");
+    By password = By.id("password");
+    By loginButton = By.id("login");
+
+    public LoginPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    public void login(String user, String pass) {
+        driver.findElement(username).sendKeys(user);
+        driver.findElement(password).sendKeys(pass);
+        driver.findElement(loginButton).click();
+    }
+}
+            </pre
+        >
+      </section>
+
+      <!-- Selenium Grid Section -->
+      <section id="selenium-grid" class="mb-4">
+        <h2 class="section-title">Selenium Grid</h2>
+        <p>
+          Selenium Grid allows distributed test execution across multiple
+          browsers and machines.
+        </p>
+        <ul>
+          <li>
+            Start a hub using:
+            <code>java -jar selenium-server-standalone.jar -role hub</code>
+          </li>
+          <li>
+            Register a node using:
+            <code
+              >java -jar selenium-server-standalone.jar -role node -hub
+              http://localhost:4444/grid/register</code
+            >
+          </li>
+        </ul>
+      </section>
+
+      <!-- Headless Testing Section -->
+      <section id="headless-testing" class="mb-4">
+        <h2 class="section-title">Headless Browser Testing</h2>
+        <p>Run tests without a visible browser to improve performance.</p>
+        <pre>
+ChromeOptions options = new ChromeOptions();
+options.addArguments("--headless");
+WebDriver driver = new ChromeDriver(options);
+driver.get("https://www.example.com");
+System.out.println(driver.getTitle());
+driver.quit();
+            </pre
+        >
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq" class="mb-4">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <ul>
+          <li>
+            <strong>Can Selenium handle CAPTCHAs?</strong> No, CAPTCHAs require
+            manual or third-party solutions.
+          </li>
+          <li>
+            <strong>Can Selenium be used for performance testing?</strong> Not
+            directly; use JMeter or LoadRunner for such tasks.
+          </li>
+          <li>
+            <strong>What browsers are supported?</strong> Chrome, Firefox, Edge,
+            Safari, etc.
+          </li>
+        </ul>
+      </section>
     </div>
-        <!-- Footer -->
-        <footer class="bg-dark text-white text-center py-3">
-            <p>Built by Harsha K R | <a href="https://github.com/harshakr1998" class="text-white">GitHub</a></p>
-        </footer>
-</div>
-</body>
+
+    <footer class="bg-dark text-light text-center p-3">
+      <p>&copy; 2024 Selenium Guide - Built with Bootstrap</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
